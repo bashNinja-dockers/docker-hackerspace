@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+if [ ! -d "/app/hackerspace" ]; then
+    git clone https://github.com/obscuritysystems/hackerspace/ /app/
+fi
+
+if [ ! -L "/app/hackerspace/settings.py" ]; then
+    ln -s /config/settings.py /app/hackerspace/settings.py
+fi
