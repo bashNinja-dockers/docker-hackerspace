@@ -14,16 +14,18 @@ RUN \
 echo "**** install packages ****" && \
 apk add --no-cache \
     python \
-    py-django \
     py-mysqldb && \
+#    sqlite && \
 echo "**** install temp packages ****" && \
 apk add --virtual _build-packages_ \ 
 	alpine-sdk  \
     python-dev && \
 #echo "**** install pip packages ****" && \
 pip install --no-cache-dir -U \
-    pytz && \
-#	django && \
+    pytz \
+	django==1.5.12 \
+    django-recaptcha \
+    braintree && \
 #echo "**** cleanup ****" && \
 #apk del --purge _build-packages_ && \
 rm -rf /var/cache/apk/* && \
@@ -37,4 +39,4 @@ COPY root/ /
 # ports and volumes
 VOLUME /config
 
-EXPOSE 8000
+EXPOSE 8181
