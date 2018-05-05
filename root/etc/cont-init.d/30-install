@@ -7,3 +7,7 @@ fi
 if [ ! -L "/app/hackerspace/settings.py" ]; then
     ln -s /config/settings.py /app/hackerspace/settings.py
 fi
+
+if [ ! -f "/config/settings.py" ]; then
+    cp /defaults/settings.py /config/settings.py
+fi
