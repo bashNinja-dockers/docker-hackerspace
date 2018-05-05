@@ -6,7 +6,7 @@
 
 ## Run the Django Hackerspace Application
 
-    docker run -d --privileged \
+    docker run -d \
         -v {path}:/config \
         -p 80:8181/tcp \
         bashninja/docker-hackerspace
