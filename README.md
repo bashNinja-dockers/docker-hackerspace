@@ -13,6 +13,6 @@
 
 ## Configure the Django Hackerspace Application
 
-* Open your {path} for /config and edit `settings.py`
+* Open your {path} for `/config` and edit `settings.py` file
 * Fill with your API and other Keys
 * Fun
